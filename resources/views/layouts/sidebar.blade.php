@@ -60,6 +60,12 @@
                         <p>Event today</p>
                     </a>
                 </li>
+                <li >
+                    <a href="{{url('walkin')}}">
+                        <i class="now-ui-icons design_app"></i>
+                        <p>Walk in</p>
+                    </a>
+                </li>
 
                 <li >
                     <a href="{{url('report')}}">

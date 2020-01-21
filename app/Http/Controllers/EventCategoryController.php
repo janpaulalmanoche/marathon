@@ -19,8 +19,9 @@ class EventCategoryController extends Controller
     public function store(Request $request){
 //        dd($request->all());
 $cont = EventCategory::where('category_id',$request->category_id)->where('event_id',$request->event_id)->count();
+$event_cat = EventCategory::where('category_id',$request->category_id)->where('event_id',$request->event_id)->first();
 if($cont >= 1){
-    dd('already exist');
+    return redirect(url('/event-category-distance',$event_cat->id));
 }
     $new = new EventCategory;
     $new->event_id = $request->event_id;

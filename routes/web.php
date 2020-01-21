@@ -88,4 +88,14 @@ Route::group(['middleware' => ['auth']], function () {
     //result report
     Route::get('report-event/{event_id}','ReportController@result');
 
+
+
+    //walk in
+    Route::resource('walkin','WalkInController');
+    //select a cat
+    Route::post('walkin-select-category','WalkInController@select');
+
+
+    Route::post('walkin-save','WalkInController@save');
+
 });

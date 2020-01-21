@@ -11,7 +11,9 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
+
                 <div class="card-header">
+                    {{--<button class="btn btn-class"> Add Walk in</button>--}}
                     <h4 class="card-title">{{ucfirst($event->title)}} - {{date('F d Y',strtotime($event->date))}} </h4>
                     <h6 class="card-title">{{ucfirst($cat_distance->category()->first()->category)}} -
                         {{$cat_distance->distance}}{{$cat_distance->measurement}} </h6>
@@ -42,7 +44,7 @@
                             <td> {{$par->status}}</td>
                             <td>
 
-                                @if(date('F d Y',strtotime($event->date)) == date('F d Y',strtotime(\Carbon\Carbon::now()) ) )
+                                @if(date('F d Y',strtotime($event->date)) >= date('F d Y',strtotime(\Carbon\Carbon::now()) ) )
 
                                     @if($par->status != 'paid')
                                 <a href="{{url('confirm',$par->id)}}">
