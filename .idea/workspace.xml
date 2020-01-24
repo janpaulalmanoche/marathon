@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/WalkInController.php" line="40" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9077f360-070f-4ad0-a474-2b20cfba5553" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9077f360-070f-4ad0-a474-2b20cfba5553" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -480,7 +478,7 @@
     <option name="totallyTimeSpent" value="44244000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="786" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26640624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
