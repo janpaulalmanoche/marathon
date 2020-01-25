@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use Alert;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -22,7 +23,7 @@ class CategoryController extends Controller
         $new->category = $request->category;
 //        $new->start_time = $request->start;
         $new->save();
-
+        // Alert::success('Success Title', 'Success Message');
         return redirect(route('category.index'));
     }
 }

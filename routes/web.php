@@ -49,14 +49,20 @@ Route::group(['middleware' => ['auth']], function () {
 
     //event
     Route::resource('/event','EventController');
+ 
     //show event participant in admin side
     Route::get('/event-paricipant/{event_id}-{cat_distance_id}','EventController@event_participant');
+   //after confirmation of pariticipant
+   Route::get('/participant-no/{evnt_par_id}','EventController@participant_no');
+
         //todays event. carbow now
     Route::get('/event-today','EventTodayController@index');
 
     //update the participant status during the day of the event to paid
     Route::get('/confirm/{id}','EventController@confirm');
 
+    Route::get('/participant-no/{evnt_par_id}','EventController@participant_no');
+    Route::post('par-no','EventController@confirm_par_number');
 
 
     //1 event category

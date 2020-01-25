@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                @if(auth()->user()->type_id == 1)
+                @if(auth()->user()->type_id == 1 || auth()->user()->type_id == 3)
                     <div class="card-header">
                         <h4 class="card-title"> User's Table | <a href="{{route('user.create')}}">Add User </a> </h4>
                     </div>

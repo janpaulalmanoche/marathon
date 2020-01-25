@@ -68,7 +68,7 @@ class WalkInController extends Controller
         $new->fee = $request->fee;
         $new->event_id = $request->event_id;
         $new->user_id = $request->user_id;
-        $new->status = 'joined';
+        $new->status = 'paid';
         $new->save();
         return redirect(url('/event'));
     }

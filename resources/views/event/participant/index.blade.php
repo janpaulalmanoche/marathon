@@ -27,7 +27,9 @@
                             <thead class=" text-primary">
                             <th>Participant</th>
                             <th>Date Sign up</th>
+                            <th>No</th>
                             <th>Status</th>
+                            <th> </th>
                             </thead>
                             @foreach($participant as $par)
                             <tbody>
@@ -41,10 +43,11 @@
                                     {{date('F d Y',strtotime($par->created_at))}}
 
                             </td>
+                            <td> {{$par->participant_no}}</td>
                             <td> {{$par->status}}</td>
                             <td>
 
-                                @if(date('F d Y',strtotime($event->date)) >= date('F d Y',strtotime(\Carbon\Carbon::now()) ) )
+                                @if($set_val == true)
 
                                     @if($par->status != 'paid')
                                 <a href="{{url('confirm',$par->id)}}">

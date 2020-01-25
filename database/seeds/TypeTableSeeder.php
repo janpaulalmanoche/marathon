@@ -13,7 +13,7 @@ class TypeTableSeeder extends Seeder
     {
       $data = [
           [
-              'type' => 'staff'
+              'type' => ''
           ],
           [
               'type' => 'participant'

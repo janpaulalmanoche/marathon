@@ -45,7 +45,7 @@ class EventController extends Controller
 
 
     public function show($event_id){
-
+// dd('tst');
         $event = Event::find($event_id);
         $event_categories = EventCategory::where('event_id',$event->id)->first();
 //        $event_category = EventCategory::with('category','event_cat_distance'
@@ -61,6 +61,20 @@ class EventController extends Controller
 
 
     public function event_participant($event_id, $cat_distance_id){
+            // dd('test');
+            $now = Carbon::now();
+            
+            $event_date = Event::find($event_id);
+
+            $event_date =Carbon::parse($event_date->date);
+
+            $set_val = false;
+            if($event_date > $now){
+               $set_val = true;
+            }
+            // dd($set_val); 
+
+
 
         $event = Event::find($event_id);
 
@@ -78,17 +92,44 @@ class EventController extends Controller
         $participant_show_up_count =  EventCategoryDistanceFeeParticipant::where('event_id',$event_id)
             ->where('category_distances_id',$cat_distance_id)->where('status','=','paid')->count();
 
+
+            // return redirect(url('participant-no',))
+
         return view('event.participant.index')->with(compact('event',
-            'participant','cat_distance','count','earning','participant_show_up_count'));
+            'participant','cat_distance','count','earning','participant_show_up_count','set_val'));
     }
+     
+
 
     public function confirm($id){
 //        dd('tet');
         $find = EventCategoryDistanceFeeParticipant::find($id);
         $find->status = 'paid';
         $find->save();
+                    
 
+        return redirect(url('participant-no',$find->id));
         return redirect()->back();
     }
+
+       //after confirmation of participant
+       public function participant_no($event_participant_id){
+    $event_cat_dis_fee_par = EventCategoryDistanceFeeParticipant::with('user','event_cat_dis_fee')->where('id',$event_participant_id)->first();
+    // dd($event_cat_dis_fee_par); 
+        return view('event.participant_no.index')->with(compact('event_cat_dis_fee_par'));
+        
+    }
+    public function confirm_par_number(Request $request){
+        // dd($request->all());
+        $find = EventCategoryDistanceFeeParticipant::find($request->event_id);
+        $find->participant_no = $request->par_no;
+        $find->save();
+        // dd($find);
+    
+        // dd($find);
+        return redirect(url('event'));
+
+    }
+
 
 }

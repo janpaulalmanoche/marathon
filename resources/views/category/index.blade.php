@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                @if(auth()->user()->type_id == 1)
+           
                 <div class="card-header">
                     <h4 class="card-title"> Categories Table | <a href="{{route('category.create')}}">Add </a></h4>
                 </div>
@@ -40,9 +40,7 @@
                     </div>
                 </div>
             </div>
-            @else
-                    Need Permision to access this page
-                @endif
+  
         </div>
     </div>
 
