@@ -50,14 +50,19 @@ class WalkInController extends Controller
             $request->cat_event_dis_fee_id)
             ->where('user_id',$request->user_id)->count();
         if($count >= 1){
-            dd('participant already registered');
+
+            flash('particant already registered')->error();
+            return redirect()->back();
+//            dd('participant already registered');
         }
 
 
         $check_if_alreadyy_join_one = EventCategoryDistanceFeeParticipant::where('event_id',$request->event_id)
             ->where('user_id',$request->user_id)->count();
         if($check_if_alreadyy_join_one >= 1){
-            dd('only one category in one event');
+            flash('only one category in one event')->error();
+            return redirect()->back();
+//            dd('only one category in one event');
         }
 
 

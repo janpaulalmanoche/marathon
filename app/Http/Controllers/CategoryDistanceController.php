@@ -27,6 +27,7 @@ class CategoryDistanceController extends Controller
         $new->measurement = 'km';
         $new->save();
 
+        flash('successfully saved')->success();
         return redirect(url('/cat-distance',$request->category_id));
     }
 

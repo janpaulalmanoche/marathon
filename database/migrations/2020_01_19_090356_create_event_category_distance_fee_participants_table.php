@@ -20,6 +20,7 @@ class CreateEventCategoryDistanceFeeParticipantsTable extends Migration
             $table->integer('fee');
 //            $table->integer('event_categories_id');
             $table->integer('event_id');
+            $table->string('participant_no')->nullable();
             $table->integer('user_id');
             $table->string('status')->nullable();
             $table->timestamps();

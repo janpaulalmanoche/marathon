@@ -23,6 +23,7 @@ class CategoryController extends Controller
 //        $new->start_time = $request->start;
         $new->save();
 
+            flash('category saved')->success();
         return redirect(route('category.index'));
     }
 }

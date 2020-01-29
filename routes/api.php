@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('send/{par_no}','EventWinnerController@send');
+Route::get('event','EventWinnerController@event_res');

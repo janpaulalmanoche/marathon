@@ -30,7 +30,10 @@ class ParticipantController extends Controller
         $count = EventCategoryDistanceFeeParticipant::where('event_category_distance_fees_id', $request->event_cat_dis_fees_id)
             ->where('user_id',auth()->user()->id)->count();
         if($count >= 1){
-            dd('already joined in this category');
+
+            flash('you already joined in this category')->error();
+            return redirect()->back();
+//            dd('already joined in this category');
         }
 
         $event_categories = EventCategory::where('id',$request->event_categories_id)->first();
@@ -40,7 +43,10 @@ class ParticipantController extends Controller
             $check_if_alreadyy_join_one = EventCategoryDistanceFeeParticipant::where('event_id',$event->id)
                 ->where('user_id',auth()->user()->id)->count();
             if($check_if_alreadyy_join_one >= 1){
-                dd('you already join one category in this event,one category in one event');
+
+                flash('you already join one category in this event,one category in one event')->error();
+                return redirect()->back();
+//                dd('you already join one category in this event,one category in one event');
             }
 
 
@@ -54,6 +60,7 @@ class ParticipantController extends Controller
         $new->status = 'joined';
         $new->save();
 
+        flash('successfully joined the event')->success();
         return redirect(url('participant-join-event'));
     }
 

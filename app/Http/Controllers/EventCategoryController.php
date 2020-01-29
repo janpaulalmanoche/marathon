@@ -28,6 +28,7 @@ if($cont >= 1){
     $new->category_id = $request->category_id;
     $new->save();
 
+        flash('successfully added')->success();
         return redirect(url('/event-category-distance',$new->id));
     }
 

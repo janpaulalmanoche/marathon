@@ -99,3 +99,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('walkin-save','WalkInController@save');
 
 });
+
+
+Route::get('haha',function(){
+
+$KK= App\EventWinner::orderBy('id', 'asc')->take(3)->get();
+dd($KK);
+});
+
+
+//https://github.com/laracasts/flash

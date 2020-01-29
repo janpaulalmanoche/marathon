@@ -11,4 +11,12 @@ class Event extends Model
         return $this->belongsTo('App\User');
 //        >where('type_id','=',3);
     }
+
+//    public function event_cat(){
+//        return $this->belongsToMany('App/EventCategory');
+//    }
+//
+//
+
+
 }
