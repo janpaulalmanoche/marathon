@@ -30,6 +30,21 @@ class EventWinnerController extends Controller
             );
         }
 
+        //if exits already
+        $count_e = EventCategoryDistanceFeeParticipant::where('participant_no',$par_id)->count();
+
+        $msg = 'already finished the event';
+        if($count_e >= 1){
+
+            return response()->json(
+                [
+                    'success' => true,
+                    'data' =>'',
+                    'place' => $msg
+                ]
+            );
+        }
+
         $find = EventCategoryDistanceFeeParticipant::with('event','event_cat_dis_fee','user','distance.category')
             ->where('participant_no',$par_id)->first();
 
