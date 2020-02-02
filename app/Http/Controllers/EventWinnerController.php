@@ -54,12 +54,16 @@ class EventWinnerController extends Controller
             ->count();
 
 //        return response($find);
+        $time_start = $find->event_cat_dis_fee()->first()->start_time;
+        $time_finished = Carbon::now();
+
         $store = new EventWinner;
         $store->event_category_distance_fees_id = $find->event_category_distance_fees_id;
         $store->category_distances_id = $find->category_distances_id;
         $store->fee = $find->fee;
         $store->event_id = $find->event_id;
         $store->participant_no = $find->participant_no;
+        $store->time_finished = $time_finished;
         $store->user_id =  $find->user_id;
         $store->save();
 
@@ -104,6 +108,27 @@ class EventWinnerController extends Controller
 //            $KK= App\EventWinner::orderBy('id', 'asc')->take(3)->get();
                     $w = EventWinner::with('category_distance_w','user_w')
                         ->where('event_category_distance_fees_id',$e_c_d_f_id)->orderBy('id','asc')->get();
+
+                    $find = EventCategoryDistanceFee::find($e_c_d_f_id);
+
+
+
+
+//            dd($start_time , $total_duration , $format);
+
+
+                    $w->map(function($var){
+                        $start_time = $find->start_time;
+                        $finish_time = Carbon::parse($var->time_finished);
+
+                        $total_duration = $finish_time->diffInSeconds($start_time);
+
+                        $format = gmdate('H:i:s', $total_duration);
+
+                        $var->finish_time = $format;
+
+                        return $var;
+                    });
 
                     return response($w);
         }

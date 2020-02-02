@@ -20,6 +20,7 @@ class CreateEventWinnersTable extends Migration
             $table->integer('category_distances_id');
             $table->integer('fee');
             $table->integer('event_id');
+            $table->datetime('time_finished');
             $table->string('participant_no')->nullable();
             $table->integer('user_id');
 
