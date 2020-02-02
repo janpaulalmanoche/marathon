@@ -109,16 +109,17 @@ class EventWinnerController extends Controller
                     $w = EventWinner::with('category_distance_w','user_w')
                         ->where('event_category_distance_fees_id',$e_c_d_f_id)->orderBy('id','asc')->get();
 
-                    $find = EventCategoryDistanceFee::find($e_c_d_f_id);
 
+            $find = EventCategoryDistanceFee::find($e_c_d_f_id);
 
-
+            $start_time = $find->start_time;
 
 //            dd($start_time , $total_duration , $format);
 
 
-                    $w->map(function($var){
-                        $start_time = $find->start_time;
+                    $w->map(function($var) use($find,$start_time){
+
+
                         $finish_time = Carbon::parse($var->time_finished);
 
                         $total_duration = $finish_time->diffInSeconds($start_time);
@@ -126,6 +127,7 @@ class EventWinnerController extends Controller
                         $format = gmdate('H:i:s', $total_duration);
 
                         $var->finish_time = $format;
+                        $var->staaaart = $start_time;
 
                         return $var;
                     });
