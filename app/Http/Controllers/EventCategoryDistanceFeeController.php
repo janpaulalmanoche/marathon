@@ -30,7 +30,9 @@ class EventCategoryDistanceFeeController extends Controller
         $count = EventCategoryDistanceFee::where('event_categories_id',$request->event_category_id)
                 ->where('category_distances_id',$request->category_distance_id)->count();
         if($count >= 1){
-         dd('you already selected tis one');
+            flash('you already selected this one')->error();
+            return redirect()->back();
+//         dd('you already selected tis one');
         }
 
         $new = new EventCategoryDistanceFee;
@@ -41,6 +43,7 @@ class EventCategoryDistanceFeeController extends Controller
         $new->fee = $request->fee;
         $new->save();
 
+        flash('success')->success();
         return redirect()->back();
 
     }

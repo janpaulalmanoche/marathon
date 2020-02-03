@@ -23,7 +23,9 @@ class CategoryController extends Controller
         $new->category = $request->category;
 //        $new->start_time = $request->start;
         $new->save();
-        // Alert::success('Success Title', 'Success Message');
+
+            flash('category saved')->success();
+
         return redirect(route('category.index'));
     }
 }

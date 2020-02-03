@@ -77,8 +77,8 @@ class UserController extends Controller
         $new->type_id = $request->type;
         $new->save();
 
-        Alert::success('Confirmed', 'Successfully Save');
-
+//        Alert::success('Confirmed', 'Successfully Save');
+    flash('successfully saved')->success();
         return redirect()->back();
     }
 

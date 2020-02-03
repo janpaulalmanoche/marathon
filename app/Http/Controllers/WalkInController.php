@@ -33,31 +33,39 @@ class WalkInController extends Controller
     }
 
     public function select(Request $request){
-//        dd($request->all());
+    //    dd($request->all());
         $event = Event::find($request->event_id);
         $cat_event_dis_fee = EventCategoryDistanceFee::find($request->event_cat_dis_fees_id);
         $cat_distance = CategoryDistance::find($request->category_distances_id);
         $event_cat = EventCategory::find($request->event_categories_id);
+
+        // return redirect(url('participant-no',));
+
 
         $user = User::where('type_id',2)->get();
         return view('walk_in.select')->with(compact('event','cat_event_dis_fee','cat_distance'
             ,'event_cat','user'));
     }
     public function save(Request $request){
-//        dd($request->all());
+    //    dd($request->all());
 
         $count = EventCategoryDistanceFeeParticipant::where('event_category_distance_fees_id',
             $request->cat_event_dis_fee_id)
             ->where('user_id',$request->user_id)->count();
         if($count >= 1){
-            dd('participant already registered');
+
+            flash('particant already registered')->error();
+            return redirect()->back();
+//            dd('participant already registered');
         }
 
 
         $check_if_alreadyy_join_one = EventCategoryDistanceFeeParticipant::where('event_id',$request->event_id)
             ->where('user_id',$request->user_id)->count();
         if($check_if_alreadyy_join_one >= 1){
-            dd('only one category in one event');
+            flash('only one category in one event')->error();
+            return redirect()->back();
+//            dd('only one category in one event');
         }
 
 
@@ -70,7 +78,9 @@ class WalkInController extends Controller
         $new->user_id = $request->user_id;
         $new->status = 'paid';
         $new->save();
-        return redirect(url('/event'));
+
+        return redirect(url('/participant-no',$new->id));
+        // return redirect(url('/event'));
     }
 
 }

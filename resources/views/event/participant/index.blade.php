@@ -29,7 +29,7 @@
                             <th>Date Sign up</th>
                             <th>No</th>
                             <th>Status</th>
-                            <th> </th>
+                            <th> </th>q
                             </thead>
                             @foreach($participant as $par)
                             <tbody>

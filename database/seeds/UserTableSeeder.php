@@ -41,6 +41,24 @@ class UserTableSeeder extends Seeder
             'email' => 'participant@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('12345'),
             ],
+            [
+                'first_name' => 'par2',
+                'middle_name' => 'par2',
+                'last_name' => 'par2',
+                'role_id' => '2',
+                'type_id' => '2',
+                'email' => 'participant2@gmail.com',
+                'password' => \Illuminate\Support\Facades\Hash::make('12345'),
+                ],
+                [
+                    'first_name' => 'part3',
+                    'middle_name' => 'pa3',
+                    'last_name' => 'par3',
+                    'role_id' => '2',
+                    'type_id' => '2',
+                    'email' => 'participant3    @gmail.com',
+                    'password' => \Illuminate\Support\Facades\Hash::make('12345'),
+                    ],
 
             [
                 'first_name' => 'gabbi',

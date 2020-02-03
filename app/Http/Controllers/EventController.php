@@ -10,6 +10,8 @@ use App\EventCategoryDistanceFeeParticipant;
 use App\Http\Controllers\Auth\VerificationController;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Laravel\Ui\UiServiceProvider;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class EventController extends Controller
 {
@@ -22,14 +24,18 @@ class EventController extends Controller
 
     public function create(){
 //            $host =
+//        dd('haha');
+//        flash('Welcome Aboard!');
+
         return view('event.create');
     }
 
     public function store(Request $request){
         if($request->date <= Carbon::now()){
-            dd('cant add an event that the date is behind in the current date of now
+            flash('cant add an event that the date is behind in the current date of now
             or an event for todays date, event must be
-             planned ahead of schedule time ',Carbon::now(),'selected date =>' , $request->date);
+             planned ahead of schedule time')->error();
+            return redirect()->back();
         }
 
 
@@ -39,7 +45,7 @@ class EventController extends Controller
         $new->organizer = $request->organizer;
         $new->date = $request->date;
         $new->save();
-
+    flash('event saved')->success();
         return redirect(route('event.index'));
     }
 
@@ -109,7 +115,8 @@ class EventController extends Controller
                     
 
         return redirect(url('participant-no',$find->id));
-        return redirect()->back();
+        // flash('particant confirmed')->success();
+        // return redirect()->back();
     }
 
        //after confirmation of participant

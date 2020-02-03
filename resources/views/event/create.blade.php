@@ -13,6 +13,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <Div class="card-header">
+
                         <h4>Add Event</h4>
                     </Div>
                     <div class="card-body">
@@ -51,6 +52,8 @@
 
 
 @section('scripts')
-
+    <script>
+        $('#flash-overlay-modal').modal();
+    </script>
 
 @endsection

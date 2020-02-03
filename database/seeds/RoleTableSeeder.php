@@ -22,5 +22,27 @@ class RoleTableSeeder extends Seeder
         ];
 
         \App\Role::insert($data);
+
+
+            $data1= [
+                        [
+                            'category' => 'kids dash'
+                        ],
+                        [
+                            'category' => 'individual'
+                        ]
+                ];
+
+                App\Category::insert($data1);
+
+                $dis   = [
+                    [
+                        'category_id' => 1,
+                        'distance' => 10,
+                        'measurement' => 'km'
+                    ]
+                    ];
+                    App\CategoryDistance::insert($dis);
+
     }
 }
