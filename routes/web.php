@@ -109,8 +109,14 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('haha',function(){
 
-$KK= App\EventWinner::orderBy('id', 'asc')->take(3)->get();
-dd($KK);
+$start_time = '05:00:00';
+$finish_time = Carbon\Carbon::parse('2020-02-02 12:00:00');
+
+$total_duration = $finish_time->diffInSeconds($start_time);
+
+
+$format = gmdate('H:i:s', $total_duration);
+dd($start_time , $total_duration , $format);
 });
 
 
