@@ -13,7 +13,7 @@
             <div class="card">
                 @if(auth()->user()->type_id == 1 || auth()->user()->type_id == 3)
                     <div class="card-header">
-                        <h4 class="card-title"> User's list | <a href="{{route('user.create')}}">Add User </a> </h4>
+                        <h4 class="card-title">Participants list | <a href="{{route('user.create')}}">Add participants </a> </h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

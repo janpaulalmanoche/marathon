@@ -19,7 +19,7 @@
                         <div class="table-responsive">
 
                             <table class="table">
-                                <thead class=" text-primary">
+                                <thead class=" text-secondary">
                                 <th>Name of event</th>
                                 <th>Host / Organizer</th>
                                 <th>Date</th>

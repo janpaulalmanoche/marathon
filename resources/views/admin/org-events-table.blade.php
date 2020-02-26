@@ -22,7 +22,7 @@
       <div class="card-body">
         <div class="table-responsive">
           <table class="table">
-            <thead class=" text-primary">
+            <thead class=" text-secondary">
               <th>id</th>
               <th>Events Name</th>
               <th>Host/organizer</th>

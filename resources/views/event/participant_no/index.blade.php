@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
-                            <thead class=" text-primary">
+                            <thead class=" text-secondary">
                             <th>Name</th>
                             <th> Category distance </th>
                             <th>Participant No</th>

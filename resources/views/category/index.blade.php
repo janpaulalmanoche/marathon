@@ -13,12 +13,12 @@
             <div class="card">
            
                 <div class="card-header">
-                    <h4 class="card-title"> Categories Table | <a href="{{route('category.create')}}">Add </a></h4>
+                    <h4 class="card-title"> Categories List | <a href="{{route('category.create')}}">Add </a></h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
-                            <thead class=" text-primary">
+                            <thead class=" text-secondary">
                             <th>Category</th>
                             {{--<th>Time Start</th>--}}
                             <th>Action</th>

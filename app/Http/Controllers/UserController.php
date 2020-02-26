@@ -42,13 +42,13 @@ class UserController extends Controller
     public function organizer(){
 
         $users = $this->user->where('type_id',3)->get();
-        return view('user.index')->with(compact('users'));
+        return view('user.organizer')->with(compact('users'));
     }
 
     public function participant(){
 
         $users = $this->user->where('type_id',2)->get();
-        return view('user.index')->with(compact('users'));
+        return view('user.participants')->with(compact('users'));
     }
 
     public function create(){

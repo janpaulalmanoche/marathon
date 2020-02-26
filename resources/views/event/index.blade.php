@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
-                            <thead class=" text-primary">
+                            <thead class=" text-secondary">
                             <th>Event</th>
                             <th>Organizer</th>
                             <th>Event Date</th>
