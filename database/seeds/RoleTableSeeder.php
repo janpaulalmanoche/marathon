@@ -42,7 +42,7 @@ class RoleTableSeeder extends Seeder
                         'measurement' => 'km'
                     ]
                     ];
-                    App\CategoryDistance::insert($dis);
+                    // App\CategoryDistance::insert($dis);
 
     }
 }
