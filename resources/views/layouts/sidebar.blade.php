@@ -23,21 +23,21 @@
 
 
 
-            <li class="{{ '/participants' == request()->path() ? 'active' : '' }}">
-                <a href="/organizer">
-                    <i class="now-ui-icons design_app"></i>
-                    <p>Organizer</p>
-                </a>
-            </li>
+            {{--<li class="{{ '/participants' == request()->path() ? 'active' : '' }}">--}}
+                {{--<a href="/organizer">--}}
+                    {{--<i class="now-ui-icons design_app"></i>--}}
+                    {{--<p>Organizer</p>--}}
+                {{--</a>--}}
+            {{--</li>--}}
 
 
 
-            <li class="{{ '/participants' == request()->path() ? 'active' : '' }}">
-                <a href="/participant">
-                    <i class="now-ui-icons design_app"></i>
-                    <p>Participant</p>
-                </a>
-            </li>
+            {{--<li class="{{ '/participants' == request()->path() ? 'active' : '' }}">--}}
+                {{--<a href="/participant">--}}
+                    {{--<i class="now-ui-icons design_app"></i>--}}
+                    {{--<p>Participant</p>--}}
+                {{--</a>--}}
+            {{--</li>--}}
 
             <li class="{{ '/participants' == request()->path() ? 'active' : '' }}">
                 <a href="/category">
