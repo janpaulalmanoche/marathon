@@ -44,14 +44,14 @@
                                         <input type="password"  name="password" class="form-control" >
                                     </div>
 
-                                    <div class="form-group">
+                                    <!-- <div class="form-group">
                                         <label>Role</label>
                                         <select  class="form-control" name="role">
                                             @foreach($role as $roles)
                                             <option value="{{$roles->id}}"> {{$roles->role}}</option>
                                                 @endforeach
                                         </select>
-                                    </div>
+                                    </div> -->
 
                                     <div class="form-group">
                                         <label>Type</label>

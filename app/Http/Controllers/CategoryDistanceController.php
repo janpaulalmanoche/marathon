@@ -15,12 +15,19 @@ class CategoryDistanceController extends Controller
         return view('category.distance.index')->with(compact('cat','distance'));
     }
     public function create($cat_id){
+        // dd('test');
         $cat = Category::find($cat_id);
         return view('category.distance.create')->with(compact('cat'));
     }
     public function store(Request $request){
 //        dd($request->all());
-
+            $count = CategoryDistance::where('category_id',$request->category_id)->count();
+                // dd($count);
+          if($count >= 1){
+            flash('Only One Distance is Allowed per Category')->error();
+            return redirect()->back();
+          }
+          
         $new = new CategoryDistance;
         $new->distance = $request->distance;
         $new->category_id = $request->category_id;

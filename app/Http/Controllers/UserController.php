@@ -92,17 +92,18 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
-//        dd($request->all());
+    //    dd($request->all());
 
         $new = new User();
         $new->first_name = $request->first_name;
         $new->middle_name = $request->middle_name;
         $new->last_name = $request->last_name;
-        $new->role_id = $request->role;
+        $new->role_id = 2;
         $new->email = $request->email;
         $new->password = Hash::make($request->password);
         $new->type_id = $request->type;
         $new->save();
+        // dd($new);   
 
 //        Alert::success('Confirmed', 'Successfully Save');
     flash('successfully saved')->success();
