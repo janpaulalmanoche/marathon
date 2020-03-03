@@ -36,13 +36,32 @@ class UserController extends Controller
     public function system_user(){
 
         $users = $this->user->where('type_id',1)->get();
-        return view('user.index')->with(compact('users'));
+
+
+     return view('user.index')->with(compact('users'));
+    }
+
+    public function system_user_api(){
+
+        $users = $this->user->with('role','type')->where('type_id',1)->get();
+
+        return response()->json([
+            'data' => $users
+        ]);
+//        return view('user.index')->with(compact('users'));
     }
 
     public function organizer(){
 
-        $users = $this->user->where('type_id',3)->get();
+        $users = $this->user->with('role','type')->where('type_id',3)->get();
         return view('user.organizer')->with(compact('users'));
+    }
+    public function organizer_api(){
+
+        $users = $this->user->with('role','type')->where('type_id',3)->get();
+        return response()->json([
+            'data' => $users
+        ]);
     }
 
     public function participant(){
@@ -50,6 +69,14 @@ class UserController extends Controller
         $users = $this->user->where('type_id',2)->get();
         return view('user.participants')->with(compact('users'));
     }
+
+    public function participant_api(){
+        $users = $this->user->with('role','type')->where('type_id',2)->get();
+        return response()->json([
+            'data' => $users
+        ]);
+    }
+
 
     public function create(){
         if(auth()->user()->role_id == 1){

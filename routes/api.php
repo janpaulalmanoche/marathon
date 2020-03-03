@@ -29,3 +29,9 @@ Route::get('ranking/{id}','EventWinnerController@get_ranking');
 
 Route::get('send/{par_no}','EventWinnerController@send');
 Route::get('event','EventWinnerController@event_res');
+
+
+
+Route::get('/system-user','UserController@system_user_api');
+Route::get('/organizer','UserController@organizer_api');
+Route::get('/participant','UserController@participant_api');

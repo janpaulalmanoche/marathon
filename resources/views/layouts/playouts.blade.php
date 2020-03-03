@@ -6,6 +6,8 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <script src="{{ asset('js/app.js') }}" defer></script>
   <title>
     {{--@yield('title')--}}
   </title>
@@ -22,7 +24,7 @@
 </head>
 
 <body class="">
-  <div class="wrapper ">
+  <div class="wrapper " id="app">
     @include('layouts.sidebar')
 
     <div class="main-panel" id="main-panel">
