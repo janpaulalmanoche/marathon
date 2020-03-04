@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->string('organizer');
             $table->date('date');
+            $table->integer('limit')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });

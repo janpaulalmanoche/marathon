@@ -29,7 +29,7 @@
                             <th>Date Sign up</th>
                             <th>No</th>
                             <th>Status</th>
-                            <th> </th>q
+                            <th> </th>
                             </thead>
                             @foreach($participant as $par)
                             <tbody>
@@ -51,9 +51,15 @@
 
                                     @if($par->status != 'paid')
                                 <a href="{{url('confirm',$par->id)}}">
+                                    @if($result_count == 'not_full')
                                     <button class="btn btn-success">
                                         Confirm Participant
                                     </button>
+                                        @else
+
+                                            {{--PARTICIPANT NO. Has Reached The Limit--}}
+
+                                        @endif
                                 </a>
                                         @else
 

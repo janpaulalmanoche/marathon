@@ -23,6 +23,7 @@
                                 <th>Name of event</th>
                                 <th>Host / Organizer</th>
                                 <th>Date</th>
+
                                 <th>time</th>
                                 </thead>
                                 <tbody>
@@ -46,6 +47,7 @@
                                 <th>Name of event</th>
                                 <th>Host / Organizer</th>
                                 <th>Date</th>
+                                <th>Limit</th>
                                 <th>Action</th>
                                 </thead>
                                 @foreach($event as $eve)
@@ -53,6 +55,7 @@
                                 <td>{{ucfirst($eve->title)}} </td>
                                 <td>{{ucfirst($eve->organizer)}} </td>
                                 <td>{{date('F d Y',strtotime($eve->date))}} </td>
+                                <td> {{$eve->limit}}</td>
                                 <td>
                                     <a href="{{url('event-details',$eve->id)}}">
                                             <button class="btn btn-success">

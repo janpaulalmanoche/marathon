@@ -31,6 +31,11 @@
                                     </div>
 
                                     <div class="form-group">
+                                        <label>Limit</label>
+                                        <input type="number" name="limit" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group">
                                         <label>Date</label>
                                         <input type="date" name="date" class="form-control" required>
                                     </div>

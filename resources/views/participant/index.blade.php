@@ -22,6 +22,7 @@
                             <th>Category</th>
                             <th>Distance</th>
                             <th>Fee</th>
+                            <th>limit</th>
                             <th>time</th>
                             {{--<th>No. Participant</th>--}}
                             <th>Action</th>
@@ -35,6 +36,7 @@
                                 </td>
 
                                 <td> {{number_format($eve->fee)}}</td>
+                                <td> {{$eve->events()->first()->limit}}</td>
 
 
                                 <td> {{date('H:i',strtotime($eve->start_time))}}</td>
@@ -47,6 +49,7 @@
                                         <input type="hidden" value="{{$eve->category_distances_id}}" name="category_distances_id">
                                         <input type="hidden" value="{{$eve->fee}}" name="fee">
                                         <input type="hidden" value="{{$eve->event_cat()->first()->id}}" name="event_categories_id">
+
 
 
                                             <button type="submit" class="btn btn-success">

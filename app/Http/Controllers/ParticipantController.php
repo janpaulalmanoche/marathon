@@ -15,10 +15,11 @@ class ParticipantController extends Controller
     public function index($event_id){
             $event = Event::find($event_id);
 
+//            $cat_dis_fee_par
 
         $event_categories = EventCategory::where('event_id',$event->id)->first();
 
-        $event_category = EventCategoryDistanceFee::with('category_distance')
+        $event_category = EventCategoryDistanceFee::with('category_distance','events')
             ->where('event_id',$event->id)->get();
 
 //            $count = EventCategoryDistanceFeeParticipant::where('event_category_distance_fees_id',$e)
@@ -26,6 +27,22 @@ class ParticipantController extends Controller
     }
 
     public function join(Request $request){
+//    dd($request->all());
+
+        $event_categories = EventCategory::where('id',$request->event_categories_id)->first();
+
+        $event = Event::where('id',$event_categories->event_id)->first();
+
+        $event_limit = $event->limit;
+        $check_paid_participants = EventCategoryDistanceFeeParticipant::where('event_id',$event->id)
+            ->where('status','=','paid')->count();
+//        dd($event_limit,$check_paid_participants);
+        if($event_limit === $check_paid_participants){
+
+            flash('Event is Full , you cannot join this Event')->error();
+            return redirect()->back();
+//            dd('already joined in this category');
+        }
 
         $count = EventCategoryDistanceFeeParticipant::where('event_category_distance_fees_id', $request->event_cat_dis_fees_id)
             ->where('user_id',auth()->user()->id)->count();
@@ -36,9 +53,7 @@ class ParticipantController extends Controller
 //            dd('already joined in this category');
         }
 
-        $event_categories = EventCategory::where('id',$request->event_categories_id)->first();
 
-        $event = Event::where('id',$event_categories->event_id)->first();
 
             $check_if_alreadyy_join_one = EventCategoryDistanceFeeParticipant::where('event_id',$event->id)
                 ->where('user_id',auth()->user()->id)->count();

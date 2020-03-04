@@ -44,6 +44,7 @@ class EventController extends Controller
         $new->title = $request->event;
         $new->organizer = $request->organizer;
         $new->date = $request->date;
+        $new->limit = $request->limit;
         $new->save();
     flash('event saved')->success();
         return redirect(route('event.index'));
@@ -68,11 +69,17 @@ class EventController extends Controller
 
     public function event_participant($event_id, $cat_distance_id){
             // dd('test');
-            $now = Carbon::now();
-            
-            $event_date = Event::find($event_id);
+        $event_date = Event::find($event_id);
+        $count_if_full = EventCategoryDistanceFeeParticipant::where('status','=','paid')->count();
+        $result_count = 'not_full';
+        if($event_date->limit == $count_if_full){
+            $result_count = 'full';
+        }
 
-            $event_date =Carbon::parse($event_date->date);
+        $now = Carbon::now();
+
+
+        $event_date =Carbon::parse($event_date->date);
 
             $set_val = false;
             if($event_date > $now){
@@ -102,7 +109,7 @@ class EventController extends Controller
             // return redirect(url('participant-no',))
 
         return view('event.participant.index')->with(compact('event',
-            'participant','cat_distance','count','earning','participant_show_up_count','set_val'));
+            'participant','cat_distance','count','earning','participant_show_up_count','set_val','result_count'));
     }
      
 

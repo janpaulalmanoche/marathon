@@ -25,5 +25,9 @@ class EventCategoryDistanceFee extends Model
             'event_category_distance_fees_id','id');
     }
 
+    public function events(){
+        return $this->belongsTo('App\Event','event_id','id');
+    }
+
 
 }

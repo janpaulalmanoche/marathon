@@ -25,6 +25,7 @@
                         </a>
                     </h4>
                 </div>
+                <form action="{{url('/event-category-distance/store')}}" method="post">
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
@@ -36,7 +37,7 @@
 
                             </thead>
                             @foreach($category_distances as $distance)
-                                <form action="{{url('/event-category-distance/store')}}" method="POST">
+
                                     @csrf
                                     <tbody>
                                     <td> {{$distance->distance}}  {{$distance->measurement}}</td>
@@ -51,7 +52,7 @@
 
                                     </td>
                                     <td>
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit">
                                             Add
                                         </button>
 

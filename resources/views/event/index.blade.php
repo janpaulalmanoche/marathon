@@ -21,6 +21,7 @@
                             <th>Event</th>
                             <th>Organizer</th>
                             <th>Event Date</th>
+                            <th>Limit</th>
                             <th>Action</th>
                             {{--<th>time</th>--}}
                             </thead>
@@ -31,6 +32,7 @@
 
                             </td>
                             <td> {{date('F d Y',strtotime($eve->date))}}</td>
+                            <td> {{$eve->limit}}</td>
                             <td>
                                 <a href="{{route('event.show',$eve->id)}}"><button class="btn btn-success">Details</button></a>
                                 <a href="{{url('/event-category',$eve->id)}}"> <button class="btn btn-primary">Category</button> </a>
