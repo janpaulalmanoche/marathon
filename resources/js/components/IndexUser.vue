@@ -7,10 +7,10 @@
                     <h4 class="card-title"> User's list | <a href="http://127.0.0.1:8000/user/create">Add User | </a>
                     filter
                     <select style="font-size:15px" @change="req" v-model="type_id">
-                        <option
-                        v-bind:key="1"
-                        v-bind:value="1"
-                        >system users</option>
+                        <!--<option-->
+                        <!--v-bind:key="1"-->
+                        <!--v-bind:value="1"-->
+                        <!--&gt;system users</option>-->
                         <option
                                 v-bind:key="2"
                                 v-bind:value="2"

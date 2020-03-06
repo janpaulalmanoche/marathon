@@ -37524,10 +37524,6 @@ var render = function() {
                 }
               },
               [
-                _c("option", { key: 1, domProps: { value: 1 } }, [
-                  _vm._v("system users")
-                ]),
-                _vm._v(" "),
                 _c("option", { key: 2, domProps: { value: 2 } }, [
                   _vm._v("participants")
                 ]),

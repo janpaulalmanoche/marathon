@@ -43,7 +43,7 @@ class UserController extends Controller
 
     public function system_user_api(){
 
-        $users = $this->user->with('role','type')->where('type_id',1)->get();
+        $users = $this->user->with('role','type')->where('type_id',2)->get();
 
         return response()->json([
             'data' => $users
@@ -85,7 +85,7 @@ class UserController extends Controller
             return view('user.create')->with(compact('role','type'));
         }
         $role = Role::where('role','!=','admin')->get();
-        $type = Type::get();
+        $type = Type::where('id','=',2)->get();
 
 
         return view('user.create')->with(compact('role','type'));
