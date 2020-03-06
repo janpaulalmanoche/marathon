@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9077f360-070f-4ad0-a474-2b20cfba5553" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/IndexUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/IndexUser.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/participant/listing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/participant/listing.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +22,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="85" column="78" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="78" />
+              <folding>
+                <element signature="e#7#389#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+              <folding>
+                <element signature="e#40#65#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="202">
+              <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
               <folding>
                 <element signature="e#40#54#0#PHP" expanded="true" />
               </folding>
@@ -34,9 +58,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/participant/listing.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-371" />
+            <state relative-caret-position="255">
+              <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Console/Commands/CancelCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="46" column="38" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="38" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -58,23 +93,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+            <state relative-caret-position="340">
+              <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
               <folding>
                 <element signature="e#40#53#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/js/components/ExampleComponent.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -96,32 +122,10 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/participant/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="61" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_19_025840_create_events_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>send</find>
-      <find>Http</find>
-      <find>CorsMiddleware</find>
-      <find>System</find>
       <find>{{</find>
       <find>users</find>
       <find>system_user</find>
@@ -134,20 +138,24 @@
       <find>web</find>
       <find>form</find>
       <find>event-category-distance</find>
-      <find>EventController</find>
       <find>paid</find>
       <find>$result_count</find>
       <find>q</find>
-      <find>event_participant</find>
       <find>time</find>
       <find>event-details</find>
       <find>index</find>
       <find>join</find>
-      <find>event-paricipant</find>
       <find>type</find>
-      <find>system-user</find>
       <find>system_user_api</find>
       <find>create</find>
+      <find>system-user</find>
+      <find>event-paricipant</find>
+      <find>EventController</find>
+      <find>event_participant</find>
+      <find>c</find>
+      <find>canceled</find>
+      <find>participant-join-event</find>
+      <find>active_listing</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/event/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventTodayController.php" />
         <option value="$PROJECT_DIR$/resources/views/event/event_today/index.blade.php" />
@@ -200,13 +207,14 @@
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2020-03-04.log" />
         <option value="$PROJECT_DIR$/app/Console/Commands/CancelCommand.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventController.php" />
         <option value="$PROJECT_DIR$/resources/views/event/participant/index.blade.php" />
         <option value="$PROJECT_DIR$/app/EventCategoryDistanceFee.php" />
         <option value="$PROJECT_DIR$/resources/views/participant/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" />
         <option value="$PROJECT_DIR$/resources/js/components/IndexUser.vue" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventController.php" />
+        <option value="$PROJECT_DIR$/resources/views/participant/listing.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" />
       </list>
     </option>
   </component>
@@ -505,12 +513,12 @@
       <workItem from="1581755097268" duration="462000" />
       <workItem from="1583199316248" duration="4272000" />
       <workItem from="1583283031112" duration="6477000" />
-      <workItem from="1583459259353" duration="541000" />
+      <workItem from="1583459259353" duration="1337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86043000" />
+    <option name="totallyTimeSpent" value="86839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
@@ -531,7 +539,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24112426" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.28994083" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -542,13 +550,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/category/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ParticipantsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -730,13 +731,6 @@
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2020-03-04.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/CancelCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/event/participant/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -786,26 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="53" column="80" selection-start-line="53" selection-start-column="65" selection-end-line="53" selection-end-column="80" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="111" column="98" lean-forward="true" selection-start-line="111" selection-start-column="98" selection-end-line="111" selection-end-column="98" />
-          <folding>
-            <element signature="e#40#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/EventCategoryDistanceFee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -824,16 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-          <folding>
-            <element signature="e#40#54#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="34" column="57" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/RoleTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -878,10 +835,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+        <state relative-caret-position="340">
+          <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
           <folding>
             <element signature="e#40#53#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="34" column="57" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/CancelCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
+          <folding>
+            <element signature="e#40#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="85" column="78" selection-start-line="85" selection-start-column="64" selection-end-line="85" selection-end-column="78" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/participant/listing.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="85" column="40" selection-start-line="85" selection-start-column="40" selection-end-line="85" selection-end-column="40" />
+          <folding>
+            <element signature="e#40#54#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

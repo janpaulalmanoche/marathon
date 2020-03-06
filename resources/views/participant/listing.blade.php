@@ -24,6 +24,7 @@
                             <th>Category</th>
                             <th>time</th>
                             <th>Distance</th>
+                            <th>Status</th>
                             <th>Fee</th>
                             </thead>
 
@@ -39,6 +40,7 @@
                                 {{$event->event_cat_dis_fee()->first()->category_distance()->first()->distance}}
                                 {{$event->event_cat_dis_fee()->first()->category_distance()->first()->measurement}}
                             </td>
+                            <td> {{$event->status}}</td>
                             <td>
                                 {{number_format($event->event_cat_dis_fee()->first()->fee)}}
                             </td>

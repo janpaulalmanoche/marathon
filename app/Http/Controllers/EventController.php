@@ -93,6 +93,7 @@ class EventController extends Controller
 
         $cat_distance = CategoryDistance::where('id',$cat_distance_id)->first();
         $participant =  EventCategoryDistanceFeeParticipant::where('event_id',$event_id)
+            ->where('status','!=','canceled')
             ->where('category_distances_id',$cat_distance_id)->get();
 
         $count =  EventCategoryDistanceFeeParticipant::where('event_id',$event_id)

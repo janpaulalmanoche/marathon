@@ -82,7 +82,9 @@ class ParticipantController extends Controller
     public function active_listing(){
 
         $event = EventCategoryDistanceFeeParticipant::where('user_id',auth()->user()->id)
-        ->where('status','=','joined')->first();
+        ->where('status','=','joined')->orWhere('status','=','canceled')
+            ->orWhere('status','=','paid')->first();
+//        dd($event);
         return view('participant.listing')->with(compact('event'));
     }
 
