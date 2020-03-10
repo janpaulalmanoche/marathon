@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/WalkInController.php" line="42" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9077f360-070f-4ad0-a474-2b20cfba5553" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/playouts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/playouts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="9077f360-070f-4ad0-a474-2b20cfba5553" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -511,16 +506,15 @@
       <workItem from="1583459259353" duration="1630000" />
       <workItem from="1583800786826" duration="445000" />
       <workItem from="1583801416313" duration="867000" />
-      <workItem from="1583849489563" duration="473000" />
+      <workItem from="1583849489563" duration="720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88917000" />
+    <option name="totallyTimeSpent" value="89164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21796875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
