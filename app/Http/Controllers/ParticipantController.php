@@ -35,9 +35,10 @@ class ParticipantController extends Controller
 
         $event_limit = $event->limit;
         $check_paid_participants = EventCategoryDistanceFeeParticipant::where('event_id',$event->id)
-            ->where('status','=','paid')->count();
+            ->where('event_category_distance_fees_id',$request->event_cat_dis_fees_id)
+            ->where('status','=','joined')->count();
 //        dd($event_limit,$check_paid_participants);
-        if($event_limit === $check_paid_participants){
+        if($event_limit == $check_paid_participants){
 
             flash('Event is Full , you cannot join this Event')->error();
             return redirect()->back();

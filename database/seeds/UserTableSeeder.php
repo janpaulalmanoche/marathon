@@ -56,7 +56,7 @@ class UserTableSeeder extends Seeder
                     'last_name' => 'par3',
                     'role_id' => '2',
                     'type_id' => '2',
-                    'email' => 'participant3    @gmail.com',
+                    'email' => 'participant3@gmail.com',
                     'password' => \Illuminate\Support\Facades\Hash::make('12345'),
                     ],
 

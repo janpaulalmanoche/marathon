@@ -87,7 +87,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 
-
     //report index
     Route::get('/report','ReportController@index');
 

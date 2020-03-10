@@ -17,6 +17,7 @@ class CreateEventCategoryDistanceFeesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('event_categories_id');
             $table->integer('event_id')->nullable();
+            $table->integer('limit')->nullable();
             $table->integer('category_distances_id');
             $table->time('start_time');
             $table->integer('fee');
