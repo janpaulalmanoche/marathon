@@ -1,4 +1,4 @@
-@extends('layouts.playouts')
+@extends('layouts.playouts2')
 
 
 @section('title')

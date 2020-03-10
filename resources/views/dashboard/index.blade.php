@@ -10,7 +10,8 @@
 
     <div class="row">
         <div class="col-md-12">
-            @if(auth()->user()->type_id == 1)
+            {{--{{dd(auth()->user()->type_id)}}--}}
+            @if(auth()->user()->type_id == 1 || auth()->user()->type_id == 3)
             <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> Events Table</h4>
