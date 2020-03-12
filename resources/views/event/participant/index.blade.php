@@ -17,6 +17,7 @@
                     <h4 class="card-title">{{ucfirst($event->title)}} - {{date('F d Y',strtotime($event->date))}} </h4>
                     <h6 class="card-title">{{ucfirst($cat_distance->category()->first()->category)}} -
                         {{$cat_distance->distance}}{{$cat_distance->measurement}} </h6>
+                    <h6 class="card-title">Onle Registration Limit: {{ucfirst($event->limit)}} </h6>
                     <h7> No. of Participants Sign up before the event - {{$count}} <br>
                         No. of Participants Show up - {{$participant_show_up_count}}</h7> <br/>
                     <h7> Paid amount - {{$earning}}</h7>
@@ -28,6 +29,7 @@
                             <th>Participant</th>
                             <th>Date Sign up</th>
                             <th>No</th>
+                            <th>Registration Type</th>
                             <th>Status</th>
                             <th> </th>
                             </thead>
@@ -44,6 +46,7 @@
 
                             </td>
                             <td> {{$par->participant_no}}</td>
+                            <td> {{$par->reg_type}}</td>
                             <td> {{$par->status}}</td>
                             <td>
 

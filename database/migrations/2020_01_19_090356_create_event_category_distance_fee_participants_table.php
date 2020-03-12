@@ -22,6 +22,7 @@ class CreateEventCategoryDistanceFeeParticipantsTable extends Migration
             $table->integer('event_id');
             $table->string('participant_no')->nullable();
             $table->integer('user_id');
+            $table->string('reg_type')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });

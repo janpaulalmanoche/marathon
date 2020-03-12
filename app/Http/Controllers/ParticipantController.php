@@ -36,11 +36,12 @@ class ParticipantController extends Controller
         $event_limit = $event->limit;
         $check_paid_participants = EventCategoryDistanceFeeParticipant::where('event_id',$event->id)
             ->where('event_category_distance_fees_id',$request->event_cat_dis_fees_id)
+            ->where('reg_type','=','online')
             ->where('status','=','joined')->count();
 //        dd($event_limit,$check_paid_participants);
         if($event_limit == $check_paid_participants){
 
-            flash('Event is Full , you cannot join this Event')->error();
+            flash('Online Registration is Full ')->error();
             return redirect()->back();
 //            dd('already joined in this category');
         }
@@ -74,6 +75,7 @@ class ParticipantController extends Controller
         $new->category_distances_id = $request->category_distances_id;
         $new->user_id = auth()->user()->id;
         $new->status = 'joined';
+        $new->reg_type = 'online';
         $new->save();
 
         flash('successfully joined the event')->success();

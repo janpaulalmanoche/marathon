@@ -77,6 +77,7 @@ class WalkInController extends Controller
         $new->event_id = $request->event_id;
         $new->user_id = $request->user_id;
         $new->status = 'paid';
+        $new->reg_type = 'walk_in';
         $new->save();
 
         return redirect(url('/participant-no',$new->id));
