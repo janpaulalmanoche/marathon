@@ -11,9 +11,10 @@
     <div class="row">
         <div class="col-md-12">
 
+
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"> Upcoming Event</h4>
+                        <h4 class="card-title"> Upcoming Event | <a href="walkin-create">Add Walk in</a></h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

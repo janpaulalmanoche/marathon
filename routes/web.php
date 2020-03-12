@@ -97,6 +97,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //walk in
     Route::resource('walkin','WalkInController');
+    Route::get('walkin-create','WalkInController@walkin_create');
     //select a cat
     Route::post('walkin-select-category','WalkInController@select');
 

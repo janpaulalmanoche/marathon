@@ -21,6 +21,11 @@ class WalkInController extends Controller
         return view('walk_in.index')->with(compact('event'));
     }
 
+    public function walkin_create(){
+        return view('walk_in.walkin_create');
+    }
+
+
     public function show($event_id){
         $event = Event::find($event_id);
 
